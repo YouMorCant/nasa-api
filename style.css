@@ -1,10 +1,18 @@
+:root {
+  --background-colour: black;
+  --primary-colour: rgb(128, 0, 128);
+  --on-background: white;
+  --box-shadow: rbga(63, 63, 63, 0.2);
+  --card-background:  rgb(0, 3, 20);
+}
+
 html {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  background: whitesmoke;
+  background: var(--background-colour);
   overflow-x: hidden;
   font-family: Verdana, sans-serif;
   font-size: 1rem;
@@ -21,7 +29,14 @@ body {
 }
 
 /* Loader */
-
+.loader {
+  background-color: var(--background-colour);
+  height: 100vh;
+  width:100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 /* Navigation */
 .navigation-container {
@@ -35,7 +50,7 @@ body {
 }
 
 .background {
-  background: whitesmoke;
+  background:var(--background-colour);
   position: fixed;
   right: 0;
   width: 100%;
@@ -51,15 +66,15 @@ body {
 }
 
 .card {
-  background: white;
+  background: var(--card-background);
   margin: 10px 10px 20px;
   border-radius: 5px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px 0 var(--box-shadow);
   transition: 0.3s;
 }
 
 .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px 0 var(--box-shadow);
 }
 
 
@@ -77,10 +92,10 @@ body {
 
 /* Save Confirmation */
 .save-confirmed {
-  background: white;
+  background: var(--background-colour);
   padding: 8px 16px;
   border-radius: 5px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px 0 var(--box-shadow);
   transition: 0.3s;
   position: fixed;
   bottom: 25px;
@@ -88,7 +103,9 @@ body {
 }
 
 /* Hidden */
-
+.hidden {
+  display: none;
+}
 
 /* Large Smartphone (Vertical) */
 @media screen and (max-width: 800px) {
