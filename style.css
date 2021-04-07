@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+:root {
+  --background-colour: rgb(248, 244, 250);
+  --primary-colour: rgb(128, 0, 128);
+  --selected-primary: rgb(184, 4, 184);
+  --on-background: aliceblue;
+  --box-shadow: rgba(0,0,0,0.2);
+  --card-background:  rgb(254, 248, 255);
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--background-colour);
+  overflow-x: hidden;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1rem;
+  line-height: 1.8rem;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5px;
+  margin-bottom: 25px;
+}
+
+/* Loader */
+.loader {
+  background-color: var(--background-colour);
+  height: 100vh;
+  width:100vw;
+  position: fixed;
+  z-index:10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Navigation */
+.navigation-container {
+  position: fixed;
+  top: 0;
+}
+
+.navigation-items {
+  display: flex;
+  justify-content: center;
+}
+
+.background {
+  background:var(--background-colour);
+  position: fixed;
+  right: 0;
+  width: 100%;
+  height: 60px;
+  z-index:  -1;
+}
+
+.clickable {
+  color: var(--primary-colour);
+  cursor: pointer;
+  user-select: none;
+}
+
+.clickable:hover {
+  color:var(--selected-primary);
+}
+
+
+/* Images Container */
+.images-container {
+  width:  800px;
+  margin-top: 50px;
+}
+
+.card {
+  background: var(--card-background);
+  margin: 10px 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 var(--box-shadow);
+  transition: 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 var(--box-shadow);
+}
+
+.card-img-top {
+  width:100%;
+  height:auto;
+  border-radius: 5px 5px 0 0;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  margin: 10px auto;
+  font-size: 24px;
+}
+
+
+
+/* Save Confirmation */
+.save-confirmed {
+  background: white;
+  padding: 8px 16px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 var(--box-shadow);
+  transition: 0.3s;
+  position: fixed;
+  bottom: 25px;
+  right: 50px;
+}
+
+/* Hidden */
+.hidden {
+  display: none;
+}
+
+/* Large Smartphone (Vertical) */
+@media screen and (max-width: 800px) {
+  body {
+    line-height: 1.4rem;
+    font-size: 0.9rem;
+    text-align: justify;
+  }
+
+  .images-container {
+    width: 100%;
+  }
+
+  .card-title {
+    font-size: 20px;
+  }
+
+  .save-confirmed {
+    right: 25px;
+  }
+  
+}
