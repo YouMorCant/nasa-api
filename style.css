@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
 :root {
-  --background-colour: rgb(248, 244, 250);
-  --primary-colour: rgb(128, 0, 128);
-  --selected-primary: rgb(184, 4, 184);
-  --on-background: aliceblue;
-  --box-shadow: rgba(0,0,0,0.2);
-  --card-background:  rgb(254, 248, 255);
+  --background-colour: rgb(18, 18, 18);
+  --primary-colour:rgba(256,99,256,0.6);
+  --selected-primary: rgba(256, 99, 256,0.7);
+  --secondary-colour: rgba(236,79,236,0.6);
+  --selected-secondary: rgba(236,79,236,0.8);
+  --on-background: rgb(252, 240, 255);
+  --box-shadow: rgba(0,0,0,0.5);
+  --card-background:  rgba(22, 22, 22, 0.7);
 }
 
 html {
@@ -20,6 +22,7 @@ body {
   font-family: 'Oswald', sans-serif;
   font-size: 1rem;
   line-height: 1.8rem;
+  color: var(--on-background);
 }
 
 .container {
@@ -71,6 +74,16 @@ body {
 
 .clickable:hover {
   color:var(--selected-primary);
+}
+
+.clickable2 {
+  color: var(--secondary-colour);
+  cursor: pointer;
+  user-select: none;
+}
+
+.clickable2:hover {
+  color:var(--selected-secondary);
 }
 
 

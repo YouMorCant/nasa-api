@@ -62,7 +62,7 @@ function createDOMNodes(page){
 
         //Add to Favourite
         const saveText = document.createElement('p');
-        saveText.classList.add('clickable');
+        saveText.classList.add('clickable2');
         if (page === 'results') {
             saveText.textContent = "Add to Favourites";
             saveText.setAttribute('onclick', `saveFavourite('${result.url}')`);
@@ -133,8 +133,6 @@ function saveFavourite(itemUrl) {
     resultsArray.forEach((item) => {
         if (item.url.includes(itemUrl) && !favourites[itemUrl]) {
             favourites[itemUrl] = item;
-            // const saveConfirmedText = favourites[itemUrl] ? 'Already in Favourites' : 'ADDED!';
-            // saveConfirmed.textContent= saveConfirmedText;
 
             //Show Save Confirmation for 2 secs
             saveConfirmed.hidden = false;
